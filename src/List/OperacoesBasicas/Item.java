@@ -1,15 +1,15 @@
 package List.OperacoesBasicas;
 
 public class Item {
+    //atributos
     private String nome;
     private double preco;
-    private int quantidade;
+    private int quant;
 
-    public Item(String nome, double preco, int quantidade) {
+    public Item(String nome, double preco, int quant) {
         this.nome = nome;
         this.preco = preco;
-        this.quantidade = quantidade;
-
+        this.quant = quant;
     }
 
     public String getNome() {
@@ -20,12 +20,16 @@ public class Item {
         return preco;
     }
 
-    public int getQuantidade() {
-        return quantidade;
+    public int getQuant() {
+        return quant;
     }
 
     @Override
     public String toString() {
-        return String.format("Item: %s | Preco: R$ %2f | Quantidade: %d" , nome , preco , quantidade);
+        return "Item{" +
+                "nome='" + nome + '\'' +
+                ", preco=" + preco +
+                ", quant=" + quant +
+                '}';
     }
 }
